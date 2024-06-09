@@ -63,7 +63,7 @@ const CreateProduct = () => {
         "/api/v1/product/create-product",
         productData
       );
-      console.log(data?.success);
+      // console.log(data?.success);
       if (data?.success) {
         toast.success("Product Created Successfully");
         navigate("/dashboard/admin/products");

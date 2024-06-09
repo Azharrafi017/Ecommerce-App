@@ -4,14 +4,20 @@ import "./index.css";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import {AuthProvider} from "./context/auth";
+import {SarchProvider} from "./context/search";
+import {CartProvider} from "./context/Cart";
 // import "antd/dist/reset.css";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   
   <AuthProvider>
-    <BrowserRouter>
-    <App />
-    </BrowserRouter>
+    <SarchProvider>
+      <CartProvider>
+         <BrowserRouter>
+           <App />
+        </BrowserRouter>
+      </CartProvider>
+    </SarchProvider>
   </AuthProvider> 
       
   
